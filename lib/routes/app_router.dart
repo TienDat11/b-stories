@@ -1,0 +1,44 @@
+// Flutter imports:
+import 'package:b_stories/routes/app_router.gr.dart';
+import 'package:b_stories/routes/app_router_path.dart';
+import 'package:flutter/material.dart';
+
+// Package imports:
+import 'package:auto_route/auto_route.dart';
+
+@AutoRouterConfig(replaceInRouteName: "Screen|Page,Route")
+class AppRouter extends RootStackRouter {
+  @override
+  RouteType get defaultRouteType => const MaterialRouteType();
+
+  @override
+  List<AutoRoute> get routes => [
+    _buildAutoRouter(
+      page: LoginRoute.page,
+      path: AppRouterPath.login,
+      initial: true,
+    ),
+  ];
+
+  CustomRoute<dynamic> _buildAutoRouter({
+    required PageInfo page,
+    String? path,
+    List<AutoRoute> children = const [],
+    bool initial = false,
+    Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)?
+    transitionsBuilder,
+  }) {
+    return CustomRoute(
+      page: page,
+      path: path,
+      initial: initial,
+      children: children,
+      transitionsBuilder: transitionsBuilder ?? TransitionsBuilders.slideLeft,
+      durationInMilliseconds: 180,
+      reverseDurationInMilliseconds: 180,
+    );
+  }
+
+  @override
+  List<AutoRouteGuard> get guards => [];
+}
