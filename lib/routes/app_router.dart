@@ -14,8 +14,8 @@ class AppRouter extends RootStackRouter {
   @override
   List<AutoRoute> get routes => [
     _buildAutoRouter(
-      page: LoginRoute.page,
-      path: AppRouterPath.login,
+      page: SplashRoute.page,
+      path: AppRouterPath.splash,
       initial: true,
     ),
   ];

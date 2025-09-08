@@ -10,21 +10,21 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:auto_route/auto_route.dart' as _i2;
-import 'package:b_stories/features/auth/presentation/login/login_page.dart'
+import 'package:b_stories/features/splash/presentation/splash/splash_page.dart'
     as _i1;
 
 /// generated route for
-/// [_i1.LoginPage]
-class LoginRoute extends _i2.PageRouteInfo<void> {
-  const LoginRoute({List<_i2.PageRouteInfo>? children})
-    : super(LoginRoute.name, initialChildren: children);
+/// [_i1.SplashPage]
+class SplashRoute extends _i2.PageRouteInfo<void> {
+  const SplashRoute({List<_i2.PageRouteInfo>? children})
+    : super(SplashRoute.name, initialChildren: children);
 
-  static const String name = 'LoginRoute';
+  static const String name = 'SplashRoute';
 
   static _i2.PageInfo page = _i2.PageInfo(
     name,
     builder: (data) {
-      return const _i1.LoginPage();
+      return const _i1.SplashPage();
     },
   );
 }

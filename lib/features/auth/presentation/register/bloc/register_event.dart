@@ -1,6 +1,6 @@
-part of 'register_bloc.dart';
+// part of 'register_bloc.dart';
 
-@freezed
-class RegisterEvent with _$RegisterEvent {
-  const factory RegisterEvent.started() = _Started;
-}
+// @freezed
+// class RegisterEvent with _$RegisterEvent {
+//   const factory RegisterEvent.started() = _Started;
+// }
