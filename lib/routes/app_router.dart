@@ -18,6 +18,17 @@ class AppRouter extends RootStackRouter {
       path: AppRouterPath.splash,
       initial: true,
     ),
+    _buildAutoRouter(
+      page: MainRoute.page,
+      path: AppRouterPath.main,
+      children: [
+        AutoRoute(page: HomeRoute.page, path: 'home'),
+        AutoRoute(page: SearchRoute.page, path: 'search'),
+        AutoRoute(page: FavouriteRoute.page, path: 'favourite'),
+        AutoRoute(page: AddStoryRoute.page, path: 'addstory'),
+        AutoRoute(page: NotificationRoute.page, path: 'notification'),
+      ],
+    ),
   ];
 
   CustomRoute<dynamic> _buildAutoRouter({

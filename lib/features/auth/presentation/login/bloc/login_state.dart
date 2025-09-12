@@ -1,6 +1,6 @@
-// part of 'login_bloc.dart';
+part of 'login_bloc.dart';
 
-// @freezed
-// class LoginState with _$LoginState {
-//   const factory LoginState({@Default(true) bool isLoading}) = _LoginState;
-// }
+@freezed
+class LoginState with _$LoginState {
+  const factory LoginState({@Default(true) bool isLoading}) = _LoginState;
+}

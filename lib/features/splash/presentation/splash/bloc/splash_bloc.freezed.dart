@@ -166,7 +166,9 @@ abstract class _Started implements SplashEvent {
 
 /// @nodoc
 mixin _$SplashState {
-  bool get isLoading => throw _privateConstructorUsedError;
+  int get percent => throw _privateConstructorUsedError;
+  bool get isFirstRun => throw _privateConstructorUsedError;
+  bool get isCompleted => throw _privateConstructorUsedError;
 
   /// Create a copy of SplashState
   /// with the given fields replaced by the non-null parameter values.
@@ -182,7 +184,7 @@ abstract class $SplashStateCopyWith<$Res> {
     $Res Function(SplashState) then,
   ) = _$SplashStateCopyWithImpl<$Res, SplashState>;
   @useResult
-  $Res call({bool isLoading});
+  $Res call({int percent, bool isFirstRun, bool isCompleted});
 }
 
 /// @nodoc
@@ -199,12 +201,24 @@ class _$SplashStateCopyWithImpl<$Res, $Val extends SplashState>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? isLoading = null}) {
+  $Res call({
+    Object? percent = null,
+    Object? isFirstRun = null,
+    Object? isCompleted = null,
+  }) {
     return _then(
       _value.copyWith(
-            isLoading: null == isLoading
-                ? _value.isLoading
-                : isLoading // ignore: cast_nullable_to_non_nullable
+            percent: null == percent
+                ? _value.percent
+                : percent // ignore: cast_nullable_to_non_nullable
+                      as int,
+            isFirstRun: null == isFirstRun
+                ? _value.isFirstRun
+                : isFirstRun // ignore: cast_nullable_to_non_nullable
+                      as bool,
+            isCompleted: null == isCompleted
+                ? _value.isCompleted
+                : isCompleted // ignore: cast_nullable_to_non_nullable
                       as bool,
           )
           as $Val,
@@ -221,7 +235,7 @@ abstract class _$$SplashStateImplCopyWith<$Res>
   ) = __$$SplashStateImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({bool isLoading});
+  $Res call({int percent, bool isFirstRun, bool isCompleted});
 }
 
 /// @nodoc
@@ -237,12 +251,24 @@ class __$$SplashStateImplCopyWithImpl<$Res>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? isLoading = null}) {
+  $Res call({
+    Object? percent = null,
+    Object? isFirstRun = null,
+    Object? isCompleted = null,
+  }) {
     return _then(
       _$SplashStateImpl(
-        isLoading: null == isLoading
-            ? _value.isLoading
-            : isLoading // ignore: cast_nullable_to_non_nullable
+        percent: null == percent
+            ? _value.percent
+            : percent // ignore: cast_nullable_to_non_nullable
+                  as int,
+        isFirstRun: null == isFirstRun
+            ? _value.isFirstRun
+            : isFirstRun // ignore: cast_nullable_to_non_nullable
+                  as bool,
+        isCompleted: null == isCompleted
+            ? _value.isCompleted
+            : isCompleted // ignore: cast_nullable_to_non_nullable
                   as bool,
       ),
     );
@@ -252,15 +278,25 @@ class __$$SplashStateImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$SplashStateImpl implements _SplashState {
-  const _$SplashStateImpl({this.isLoading = true});
+  const _$SplashStateImpl({
+    this.percent = 0,
+    this.isFirstRun = false,
+    this.isCompleted = false,
+  });
 
   @override
   @JsonKey()
-  final bool isLoading;
+  final int percent;
+  @override
+  @JsonKey()
+  final bool isFirstRun;
+  @override
+  @JsonKey()
+  final bool isCompleted;
 
   @override
   String toString() {
-    return 'SplashState(isLoading: $isLoading)';
+    return 'SplashState(percent: $percent, isFirstRun: $isFirstRun, isCompleted: $isCompleted)';
   }
 
   @override
@@ -268,12 +304,16 @@ class _$SplashStateImpl implements _SplashState {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SplashStateImpl &&
-            (identical(other.isLoading, isLoading) ||
-                other.isLoading == isLoading));
+            (identical(other.percent, percent) || other.percent == percent) &&
+            (identical(other.isFirstRun, isFirstRun) ||
+                other.isFirstRun == isFirstRun) &&
+            (identical(other.isCompleted, isCompleted) ||
+                other.isCompleted == isCompleted));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, isLoading);
+  int get hashCode =>
+      Object.hash(runtimeType, percent, isFirstRun, isCompleted);
 
   /// Create a copy of SplashState
   /// with the given fields replaced by the non-null parameter values.
@@ -285,10 +325,18 @@ class _$SplashStateImpl implements _SplashState {
 }
 
 abstract class _SplashState implements SplashState {
-  const factory _SplashState({final bool isLoading}) = _$SplashStateImpl;
+  const factory _SplashState({
+    final int percent,
+    final bool isFirstRun,
+    final bool isCompleted,
+  }) = _$SplashStateImpl;
 
   @override
-  bool get isLoading;
+  int get percent;
+  @override
+  bool get isFirstRun;
+  @override
+  bool get isCompleted;
 
   /// Create a copy of SplashState
   /// with the given fields replaced by the non-null parameter values.

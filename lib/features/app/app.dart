@@ -1,3 +1,4 @@
+import 'package:b_stories/core/constants/app_fonts.dart';
 import 'package:b_stories/routes/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
@@ -29,6 +30,11 @@ class App extends StatelessWidget {
         routerDelegate: _appRouter.delegate(),
         routeInformationParser: _appRouter.defaultRouteParser(),
         routeInformationProvider: _appRouter.routeInfoProvider(),
+        theme: ThemeData(
+          fontFamily: AppFonts.gNunito,
+          // colorScheme: ColorScheme.fromSeed(seedColor: AppColor.primary),
+          useMaterial3: true,
+        ),
       ),
     );
   }
