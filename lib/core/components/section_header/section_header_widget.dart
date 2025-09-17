@@ -1,3 +1,6 @@
+import 'package:b_stories/core/components/text/custom_text.dart';
+import 'package:b_stories/core/constants/app_colors.dart';
+import 'package:b_stories/core/constants/app_sizes.dart';
 import 'package:flutter/material.dart';
 
 class SectionHeaderWidget extends StatelessWidget {
@@ -13,11 +16,13 @@ class SectionHeaderWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+      padding: EdgeInsets.symmetric(
+        horizontal: AppSizes.width.w16,
+      ).copyWith(top: AppSizes.height.h16, bottom: AppSizes.height.h12),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text(
+          CustomText(
             title,
             style: TextStyle(
               fontSize: 20,
@@ -25,15 +30,16 @@ class SectionHeaderWidget extends StatelessWidget {
               color: Colors.black87,
             ),
           ),
-          TextButton(
-            onPressed: onTap,
-            child: Text(
+          GestureDetector(
+            onTap: onTap,
+            child: CustomText(
               'Xem tất cả',
-              style: TextStyle(
-                fontSize: 14,
-                color: Colors.orange[700],
-                fontWeight: FontWeight.w600,
-              ),
+              gradient: LinearGradient(colors: AppColors.primaryGradient),
+              // style: TextStyle(
+              //   fontSize: 14,
+              //   color: Colors.orange[700],
+              //   fontWeight: FontWeight.w600,
+              // ),
             ),
           ),
         ],

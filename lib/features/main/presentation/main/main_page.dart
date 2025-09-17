@@ -22,15 +22,15 @@ class _MainScreenState extends State<MainScreen> {
   }
 
   final List<PageRouteInfo<dynamic>>? menuBarRoutes = const [
-    NotificationRoute(),
     HomeRoute(),
     SearchRoute(),
-    AddStoryRoute(),
     FavouriteRoute(),
+    ChildrenRoute(),
+    NewStoryRoute(),
   ];
 
   final List<BottomNavItem> menuBar = [
-    BottomNavItem(iconPath: AppSvgs.home, label: 'Home'),
+    BottomNavItem(iconPath: AppSvgs.home, label: 'Trang chủ'),
     BottomNavItem(iconPath: AppSvgs.search, label: 'Tìm kiếm'),
     BottomNavItem(iconPath: AppSvgs.layer, label: ''),
     BottomNavItem(iconPath: AppSvgs.user, label: 'Cho trẻ'),

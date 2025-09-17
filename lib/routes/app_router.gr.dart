@@ -10,34 +10,35 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:auto_route/auto_route.dart' as _i9;
-import 'package:b_stories/features/add_story/presentation/add_story/add_story_page.dart'
+import 'package:b_stories/features/children/presentation/children/children_screen.dart'
     as _i1;
-import 'package:b_stories/features/auth/presentation/login/login_page.dart'
-    as _i4;
 import 'package:b_stories/features/favourite/presentation/favourite_page.dart'
     as _i2;
-import 'package:b_stories/features/home/presentation/home/home_page.dart'
+import 'package:b_stories/features/home/presentation/home/home_screen.dart'
     as _i3;
 import 'package:b_stories/features/main/presentation/main/main_page.dart'
+    as _i4;
+import 'package:b_stories/features/new_story/presentation/new_story/new_story_screen.dart'
     as _i5;
-import 'package:b_stories/features/notification/presentation/notification/notification_page.dart'
+import 'package:b_stories/features/notification/presentation/notification/notification_screen.dart'
     as _i6;
-import 'package:b_stories/features/search/presentation/search_page.dart' as _i7;
-import 'package:b_stories/features/splash/presentation/splash/splash_page.dart'
+import 'package:b_stories/features/search/presentation/search_screen.dart'
+    as _i7;
+import 'package:b_stories/features/splash/presentation/splash/splash_screen.dart'
     as _i8;
 
 /// generated route for
-/// [_i1.AddStoryPage]
-class AddStoryRoute extends _i9.PageRouteInfo<void> {
-  const AddStoryRoute({List<_i9.PageRouteInfo>? children})
-    : super(AddStoryRoute.name, initialChildren: children);
+/// [_i1.ChildrenScreen]
+class ChildrenRoute extends _i9.PageRouteInfo<void> {
+  const ChildrenRoute({List<_i9.PageRouteInfo>? children})
+    : super(ChildrenRoute.name, initialChildren: children);
 
-  static const String name = 'AddStoryRoute';
+  static const String name = 'ChildrenRoute';
 
   static _i9.PageInfo page = _i9.PageInfo(
     name,
     builder: (data) {
-      return const _i1.AddStoryPage();
+      return const _i1.ChildrenScreen();
     },
   );
 }
@@ -59,7 +60,7 @@ class FavouriteRoute extends _i9.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i3.HomePage]
+/// [_i3.HomeScreen]
 class HomeRoute extends _i9.PageRouteInfo<void> {
   const HomeRoute({List<_i9.PageRouteInfo>? children})
     : super(HomeRoute.name, initialChildren: children);
@@ -69,29 +70,13 @@ class HomeRoute extends _i9.PageRouteInfo<void> {
   static _i9.PageInfo page = _i9.PageInfo(
     name,
     builder: (data) {
-      return const _i3.HomePage();
+      return const _i3.HomeScreen();
     },
   );
 }
 
 /// generated route for
-/// [_i4.LoginPage]
-class LoginRoute extends _i9.PageRouteInfo<void> {
-  const LoginRoute({List<_i9.PageRouteInfo>? children})
-    : super(LoginRoute.name, initialChildren: children);
-
-  static const String name = 'LoginRoute';
-
-  static _i9.PageInfo page = _i9.PageInfo(
-    name,
-    builder: (data) {
-      return const _i4.LoginPage();
-    },
-  );
-}
-
-/// generated route for
-/// [_i5.MainScreen]
+/// [_i4.MainScreen]
 class MainRoute extends _i9.PageRouteInfo<void> {
   const MainRoute({List<_i9.PageRouteInfo>? children})
     : super(MainRoute.name, initialChildren: children);
@@ -101,13 +86,29 @@ class MainRoute extends _i9.PageRouteInfo<void> {
   static _i9.PageInfo page = _i9.PageInfo(
     name,
     builder: (data) {
-      return const _i5.MainScreen();
+      return const _i4.MainScreen();
     },
   );
 }
 
 /// generated route for
-/// [_i6.NotificationPage]
+/// [_i5.NewStoryScreen]
+class NewStoryRoute extends _i9.PageRouteInfo<void> {
+  const NewStoryRoute({List<_i9.PageRouteInfo>? children})
+    : super(NewStoryRoute.name, initialChildren: children);
+
+  static const String name = 'NewStoryRoute';
+
+  static _i9.PageInfo page = _i9.PageInfo(
+    name,
+    builder: (data) {
+      return const _i5.NewStoryScreen();
+    },
+  );
+}
+
+/// generated route for
+/// [_i6.NotificationScreen]
 class NotificationRoute extends _i9.PageRouteInfo<void> {
   const NotificationRoute({List<_i9.PageRouteInfo>? children})
     : super(NotificationRoute.name, initialChildren: children);
@@ -117,13 +118,13 @@ class NotificationRoute extends _i9.PageRouteInfo<void> {
   static _i9.PageInfo page = _i9.PageInfo(
     name,
     builder: (data) {
-      return const _i6.NotificationPage();
+      return const _i6.NotificationScreen();
     },
   );
 }
 
 /// generated route for
-/// [_i7.SearchPage]
+/// [_i7.SearchScreen]
 class SearchRoute extends _i9.PageRouteInfo<void> {
   const SearchRoute({List<_i9.PageRouteInfo>? children})
     : super(SearchRoute.name, initialChildren: children);
@@ -133,13 +134,13 @@ class SearchRoute extends _i9.PageRouteInfo<void> {
   static _i9.PageInfo page = _i9.PageInfo(
     name,
     builder: (data) {
-      return const _i7.SearchPage();
+      return const _i7.SearchScreen();
     },
   );
 }
 
 /// generated route for
-/// [_i8.SplashPage]
+/// [_i8.SplashScreen]
 class SplashRoute extends _i9.PageRouteInfo<void> {
   const SplashRoute({List<_i9.PageRouteInfo>? children})
     : super(SplashRoute.name, initialChildren: children);
@@ -149,7 +150,7 @@ class SplashRoute extends _i9.PageRouteInfo<void> {
   static _i9.PageInfo page = _i9.PageInfo(
     name,
     builder: (data) {
-      return const _i8.SplashPage();
+      return const _i8.SplashScreen();
     },
   );
 }

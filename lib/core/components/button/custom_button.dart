@@ -91,7 +91,7 @@ class CustomButton extends StatelessWidget {
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
           elevation: 0,
-          textStyle: textStyle ?? AppStyle.boldSubtitle1,
+          textStyle: textStyle ?? AppStyle.vanButoommeDiumSemiBold,
           foregroundColor: foregroundColor ?? AppColors.surfaceWhite,
           backgroundColor: Colors.transparent, // để gradient hiển thị
           shadowColor: Colors.transparent,

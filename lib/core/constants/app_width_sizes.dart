@@ -105,6 +105,10 @@ class AppWidthSizes {
   double get w112 => 112.w;
   double get w120 => 120.w;
   double get w158 => 158.w;
+  double get w160 => 160.w;
+  double get w161 => 161.w;
+  double get w173 => 173.w;
   double get w174 => 174.w;
   double get w224 => 224.w;
+  double get w358 => 358.w;
 }

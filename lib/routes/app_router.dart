@@ -16,17 +16,18 @@ class AppRouter extends RootStackRouter {
     _buildAutoRouter(
       page: SplashRoute.page,
       path: AppRouterPath.splash,
-      initial: true,
+      //initial: true,
     ),
     _buildAutoRouter(
       page: MainRoute.page,
       path: AppRouterPath.main,
+      initial: true,
       children: [
-        AutoRoute(page: HomeRoute.page, path: 'home'),
-        AutoRoute(page: SearchRoute.page, path: 'search'),
-        AutoRoute(page: FavouriteRoute.page, path: 'favourite'),
-        AutoRoute(page: AddStoryRoute.page, path: 'addstory'),
-        AutoRoute(page: NotificationRoute.page, path: 'notification'),
+        AutoRoute(page: HomeRoute.page, path: 'Trang chủ'),
+        AutoRoute(page: SearchRoute.page, path: 'Tìm kiếm'),
+        AutoRoute(page: FavouriteRoute.page, path: 'FavouriteRoute'),
+        AutoRoute(page: ChildrenRoute.page, path: 'Cho trẻ'),
+        AutoRoute(page: NewStoryRoute.page, path: 'Truyện mới'),
       ],
     ),
   ];

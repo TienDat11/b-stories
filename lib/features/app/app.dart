@@ -3,6 +3,7 @@ import 'package:b_stories/routes/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class App extends StatelessWidget {
   App({super.key});
@@ -31,7 +32,7 @@ class App extends StatelessWidget {
         routeInformationParser: _appRouter.defaultRouteParser(),
         routeInformationProvider: _appRouter.routeInfoProvider(),
         theme: ThemeData(
-          fontFamily: AppFonts.gNunito,
+          textTheme: GoogleFonts.nunitoTextTheme(),
           // colorScheme: ColorScheme.fromSeed(seedColor: AppColor.primary),
           useMaterial3: true,
         ),

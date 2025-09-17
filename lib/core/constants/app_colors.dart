@@ -22,6 +22,7 @@ class AppColors {
   static const Color textNeutral800 = Color(0xFF28282A);
   static const Color textNeutral900 = Color(0xFF141414);
   static const Color orange100 = Color(0xFFFFEDD5);
+  static const Color whiteNeuTral50 = Color(0xFFFDFDFD);
 
   static const Color second2 = Color(0xFFFFA800);
   static const Color primary = Color(0xFFFF6B00);
@@ -41,9 +42,19 @@ class AppColors {
   static const Color black = Color(0xFF000000);
   static const Color white = Color(0xFFFFFFFF);
 
+  //màu viền card
+  static const Color card = Color(0xFFC56909);
+
   // Gradient (không thể là const vì List const Color chưa được Flutter hỗ trợ trực tiếp)
   static const List<Color> primaryGradient = [
     Color(0xFFFFA800),
     Color(0xFFFF6B00),
   ];
+
+  static const List<Color> linearGradient = [
+    Color(0xFFFFD68F),
+    Color(0xFFD56B36),
+  ];
+
+  static const List<Color> carGradient = [Color(0xFFFF8002), Color(0xFFFFD945)];
 }

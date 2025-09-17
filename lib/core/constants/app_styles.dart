@@ -14,6 +14,21 @@ class AppStyle {
     color: AppColors.primary,
   );
 
+  static TextStyle capBold12 = TextStyle(
+    fontWeight: FontWeight.w700,
+    fontSize: AppSizes.font.sp12,
+    height: 1.5,
+    letterSpacing: 0,
+    color: AppColors.white,
+  );
+
+  static TextStyle headlinesH6 = TextStyle(
+    fontWeight: FontWeight.w700,
+    fontSize: AppSizes.font.sp18,
+    height: 1.5,
+    letterSpacing: 0,
+    color: AppColors.textNeutral700,
+  );
   static TextStyle boldSubtitle1 = TextStyle(
     fontWeight: FontWeight.w700,
     fontSize: AppSizes.font.sp16,
@@ -22,39 +37,30 @@ class AppStyle {
     color: AppColors.textNeutral700,
   );
 
-  // Style cơ bản cho heading10Medium (không có gradient)
-  // static TextStyle heading10MediumBase = TextStyle(
-  //   fontWeight: FontWeight.w500,
-  //   fontSize: 10.0, // Thay bằng AppSizes.font.sp10 nếu có
-  //   height: 1.5,
-  //   letterSpacing: 0,
-  // );
+  static TextStyle boldh6 = TextStyle(
+    fontWeight: FontWeight.w700,
+    fontSize: AppSizes.font.sp18,
+    height: 1.5,
+    letterSpacing: 0,
+    color: AppColors.white,
+  );
 
-  // Phương thức static tạo text với gradient
-  // static Widget heading10MediumGradient(String text, {TextAlign? textAlign}) {
-  //   return ShaderMask(
-  //     blendMode: BlendMode.srcIn, // Đảm bảo gradient áp lên text
-  //     shaderCallback: (Rect bounds) {
-  //       return LinearGradient(
-  //         colors: AppColors.primaryGradient, // Sử dụng gradient từ AppColors
-  //         begin: Alignment.topLeft,
-  //         end: Alignment.bottomRight,
-  //       ).createShader(bounds);
-  //     },
-  //     child: Text(
-  //       text,
-  //       textAlign: textAlign,
-  //       style: heading10MediumBase.copyWith(
-  //         color:
-  //             Colors.white, // ShaderMask cần color trắng để gradient hiển thị
-  //       ),
-  //     ),
-  //   );
-  // }
+  static TextStyle vanButoommeDiumSemiBold = TextStyle(
+    fontFamily: 'Nunito',
+    fontWeight: FontWeight.w600,
+    fontSize: AppSizes.font.sp18,
+    height: 1.3,
+    letterSpacing: 0,
+    color: AppColors.white,
+  );
 
-  /////
-
-  ///////
+  static TextStyle medium2 = TextStyle(
+    fontWeight: FontWeight.w500,
+    fontSize: AppSizes.font.sp14,
+    height: 1.5,
+    letterSpacing: 0,
+    color: AppColors.textSecondary,
+  );
 
   // Navigation bar labels (unselected - grey, regular)
   static TextStyle bottomNavUnselected = TextStyle(

@@ -2,5 +2,9 @@ part of 'home_bloc.dart';
 
 @freezed
 class HomeState with _$HomeState {
-  const factory HomeState.initial() = _Initial;
+  factory HomeState({
+    @Default(false) bool isLoading,
+    @Default([]) List<StoryModel> stories,
+    String? errorMessage,
+  }) = _HomeState;
 }

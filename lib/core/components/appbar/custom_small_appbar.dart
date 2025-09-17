@@ -17,10 +17,14 @@ class CustomSmallAppbar extends StatelessWidget implements PreferredSizeWidget {
     required this.title,
     this.style,
     this.rightTitle,
+    this.iconPath,
+    this.onTap,
   });
   final String title;
   final TextStyle? style;
   final Widget? rightTitle;
+  final String? iconPath;
+  final VoidCallback? onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -52,7 +56,14 @@ class CustomSmallAppbar extends StatelessWidget implements PreferredSizeWidget {
               ],
             ],
           ),
-          SizedBox(width: AppSizes.width.w24),
+          GestureDetector(
+            onTap: onTap,
+            child: SvgPicture.asset(
+              iconPath ?? '',
+              width: AppSizes.square.r24,
+              height: AppSizes.square.r24,
+            ),
+          ),
         ],
       ),
     );
