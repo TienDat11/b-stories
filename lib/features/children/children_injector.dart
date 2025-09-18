@@ -3,7 +3,7 @@ import 'package:get_it/get_it.dart';
 
 final childrenInjector = GetIt.instance;
 
-void setupSplashInjector() {
+void setupChildrenInjector() {
   // Repository
   // UseCases
   // Bloc

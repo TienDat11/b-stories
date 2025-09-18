@@ -1,4 +1,4 @@
-import 'package:b_stories/core/components/text/custom_text.dart';
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:b_stories/core/constants/app_colors.dart';
 import 'package:b_stories/core/constants/app_sizes.dart';
 import 'package:b_stories/core/constants/app_styles.dart';
@@ -34,7 +34,7 @@ class StoryCard extends StatelessWidget {
           ),
           child: Stack(
             children: [
-              // fill container
+              // background image + border
               Positioned.fill(
                 top: 4,
                 bottom: 4,
@@ -69,21 +69,25 @@ class StoryCard extends StatelessWidget {
                 ),
               ),
 
-              // title
-              Positioned(
-                left: 10,
-                right: 10,
-                top: 8,
-                child: CustomText(
-                  textAlign: TextAlign.center,
-                  title,
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
-                  style: AppStyle.capBold12,
+              // title (fixed)
+              Align(
+                alignment: Alignment.topCenter,
+                child: Container(
+                  width: double.infinity, // chiếm hết ngang card
+                  margin: const EdgeInsets.symmetric(
+                    horizontal: 8,
+                  ).copyWith(top: 8, bottom: 6),
+                  child: AutoSizeText(
+                    title,
+                    style: AppStyle.capBold12,
+                    maxLines: 1,
+                    minFontSize: 10,
+                    maxFontSize: 18,
+                    overflow: TextOverflow.ellipsis,
+                    textAlign: TextAlign.center,
+                  ),
                 ),
               ),
-
-              // image
             ],
           ),
         ),

@@ -23,4 +23,5 @@ class AppSvgs {
   static const String left = "assets/svgs/ic_left.svg";
   static const String newstory = "assets/svgs/ic_new_story_card.svg";
   static const String bookleft = "assets/svgs/ic_book_left.svg";
+  static const String star = "assets/svgs/star.svg";
 }

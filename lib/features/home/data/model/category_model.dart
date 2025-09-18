@@ -17,7 +17,3 @@ CategoryModel science = CategoryModel()
 CategoryModel joke = CategoryModel()
   ..icon = AppSvgs.funny
   ..title = 'Truyện cười';
-
-CategoryModel legend = CategoryModel()
-  ..icon = AppSvgs.legend
-  ..title = 'Truyền thuyết';

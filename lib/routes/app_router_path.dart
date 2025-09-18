@@ -9,4 +9,6 @@ class AppRouterPath {
   static const String notification = '/notification';
   static const String search = '/search';
   static const String newStory = '/newStory';
+  static const String reading = '/reading';
+  static const String read = '/read';
 }

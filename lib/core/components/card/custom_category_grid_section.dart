@@ -3,11 +3,11 @@ import 'package:b_stories/features/home/data/model/category_model.dart';
 import 'package:b_stories/features/home/data/model/story_model.dart';
 import 'package:flutter/material.dart';
 
-class CategoryGridSection extends StatelessWidget {
+class CustomCategoryGridSection extends StatelessWidget {
   final double aspectRatio;
   final int maxItems;
 
-  const CategoryGridSection({
+  const CustomCategoryGridSection({
     super.key,
     this.aspectRatio = 173 / 186,
     this.maxItems = 4,

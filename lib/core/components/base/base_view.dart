@@ -65,7 +65,9 @@ class _BaseViewState<B extends BlocBase<S>, S> extends State<BaseView<B, S>> {
   @override
   void dispose() {
     if (EasyLoading.isShow) EasyLoading.dismiss();
-    _bloc.close(); // BaseView sở hữu bloc nên tự đóng
+    // Với Singleton, KHÔNG dispose bloc ở đây
+    // Bloc sẽ được quản lý bởi GetIt và tự động dispose khi app đóng
+    // Disposing bloc sẽ làm mất state đã lưu và gây loading lại
     super.dispose();
   }
 

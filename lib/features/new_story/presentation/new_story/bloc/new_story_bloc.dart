@@ -6,9 +6,10 @@ part 'new_story_state.dart';
 part 'new_story_bloc.freezed.dart';
 
 class NewStoryBloc extends Bloc<NewStoryEvent, NewStoryState> {
-  NewStoryBloc() : super(_Initial()) {
-    on<NewStoryEvent>((event, emit) {
-      // TODO: implement event handler
-    });
+  NewStoryBloc() : super(_NewStoryState()) {
+    on<_Started>(_onInitial);
+  }
+  Future<void> _onInitial(_Started event, Emitter<NewStoryState> emit) async {
+    // No-op for now
   }
 }

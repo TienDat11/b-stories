@@ -166,32 +166,14 @@ abstract class _Started implements NewStoryEvent {
 
 /// @nodoc
 mixin _$NewStoryState {
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-  }) => throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-  }) => throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    required TResult orElse(),
-  }) => throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-  }) => throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-  }) => throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    required TResult orElse(),
-  }) => throw _privateConstructorUsedError;
+  bool get isLoading => throw _privateConstructorUsedError;
+  String? get errorMessage => throw _privateConstructorUsedError;
+
+  /// Create a copy of NewStoryState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $NewStoryStateCopyWith<NewStoryState> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -200,6 +182,8 @@ abstract class $NewStoryStateCopyWith<$Res> {
     NewStoryState value,
     $Res Function(NewStoryState) then,
   ) = _$NewStoryStateCopyWithImpl<$Res, NewStoryState>;
+  @useResult
+  $Res call({bool isLoading, String? errorMessage});
 }
 
 /// @nodoc
@@ -214,101 +198,118 @@ class _$NewStoryStateCopyWithImpl<$Res, $Val extends NewStoryState>
 
   /// Create a copy of NewStoryState
   /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({Object? isLoading = null, Object? errorMessage = freezed}) {
+    return _then(
+      _value.copyWith(
+            isLoading: null == isLoading
+                ? _value.isLoading
+                : isLoading // ignore: cast_nullable_to_non_nullable
+                      as bool,
+            errorMessage: freezed == errorMessage
+                ? _value.errorMessage
+                : errorMessage // ignore: cast_nullable_to_non_nullable
+                      as String?,
+          )
+          as $Val,
+    );
+  }
 }
 
 /// @nodoc
-abstract class _$$InitialImplCopyWith<$Res> {
-  factory _$$InitialImplCopyWith(
-    _$InitialImpl value,
-    $Res Function(_$InitialImpl) then,
-  ) = __$$InitialImplCopyWithImpl<$Res>;
+abstract class _$$NewStoryStateImplCopyWith<$Res>
+    implements $NewStoryStateCopyWith<$Res> {
+  factory _$$NewStoryStateImplCopyWith(
+    _$NewStoryStateImpl value,
+    $Res Function(_$NewStoryStateImpl) then,
+  ) = __$$NewStoryStateImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({bool isLoading, String? errorMessage});
 }
 
 /// @nodoc
-class __$$InitialImplCopyWithImpl<$Res>
-    extends _$NewStoryStateCopyWithImpl<$Res, _$InitialImpl>
-    implements _$$InitialImplCopyWith<$Res> {
-  __$$InitialImplCopyWithImpl(
-    _$InitialImpl _value,
-    $Res Function(_$InitialImpl) _then,
+class __$$NewStoryStateImplCopyWithImpl<$Res>
+    extends _$NewStoryStateCopyWithImpl<$Res, _$NewStoryStateImpl>
+    implements _$$NewStoryStateImplCopyWith<$Res> {
+  __$$NewStoryStateImplCopyWithImpl(
+    _$NewStoryStateImpl _value,
+    $Res Function(_$NewStoryStateImpl) _then,
   ) : super(_value, _then);
 
   /// Create a copy of NewStoryState
   /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({Object? isLoading = null, Object? errorMessage = freezed}) {
+    return _then(
+      _$NewStoryStateImpl(
+        isLoading: null == isLoading
+            ? _value.isLoading
+            : isLoading // ignore: cast_nullable_to_non_nullable
+                  as bool,
+        errorMessage: freezed == errorMessage
+            ? _value.errorMessage
+            : errorMessage // ignore: cast_nullable_to_non_nullable
+                  as String?,
+      ),
+    );
+  }
 }
 
 /// @nodoc
 
-class _$InitialImpl implements _Initial {
-  const _$InitialImpl();
+class _$NewStoryStateImpl implements _NewStoryState {
+  _$NewStoryStateImpl({this.isLoading = false, this.errorMessage});
+
+  @override
+  @JsonKey()
+  final bool isLoading;
+  @override
+  final String? errorMessage;
 
   @override
   String toString() {
-    return 'NewStoryState.initial()';
+    return 'NewStoryState(isLoading: $isLoading, errorMessage: $errorMessage)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$InitialImpl);
+        (other.runtimeType == runtimeType &&
+            other is _$NewStoryStateImpl &&
+            (identical(other.isLoading, isLoading) ||
+                other.isLoading == isLoading) &&
+            (identical(other.errorMessage, errorMessage) ||
+                other.errorMessage == errorMessage));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, isLoading, errorMessage);
 
+  /// Create a copy of NewStoryState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({required TResult Function() initial}) {
-    return initial();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({TResult? Function()? initial}) {
-    return initial?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    required TResult orElse(),
-  }) {
-    if (initial != null) {
-      return initial();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-  }) {
-    return initial(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-  }) {
-    return initial?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    required TResult orElse(),
-  }) {
-    if (initial != null) {
-      return initial(this);
-    }
-    return orElse();
-  }
+  @pragma('vm:prefer-inline')
+  _$$NewStoryStateImplCopyWith<_$NewStoryStateImpl> get copyWith =>
+      __$$NewStoryStateImplCopyWithImpl<_$NewStoryStateImpl>(this, _$identity);
 }
 
-abstract class _Initial implements NewStoryState {
-  const factory _Initial() = _$InitialImpl;
+abstract class _NewStoryState implements NewStoryState {
+  factory _NewStoryState({final bool isLoading, final String? errorMessage}) =
+      _$NewStoryStateImpl;
+
+  @override
+  bool get isLoading;
+  @override
+  String? get errorMessage;
+
+  /// Create a copy of NewStoryState
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$NewStoryStateImplCopyWith<_$NewStoryStateImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

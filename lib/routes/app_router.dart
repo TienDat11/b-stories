@@ -30,6 +30,17 @@ class AppRouter extends RootStackRouter {
         AutoRoute(page: NewStoryRoute.page, path: 'Truyện mới'),
       ],
     ),
+    _buildAutoRouter(
+      page: ReadRoute.page,
+      path: AppRouterPath.read,
+      //initial: true,
+    ),
+
+    _buildAutoRouter(
+      page: ReadingRoute.page,
+      path: AppRouterPath.reading,
+      //initial: true,
+    ),
   ];
 
   CustomRoute<dynamic> _buildAutoRouter({

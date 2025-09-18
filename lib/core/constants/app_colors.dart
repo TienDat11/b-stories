@@ -44,6 +44,7 @@ class AppColors {
 
   //màu viền card
   static const Color card = Color(0xFFC56909);
+  static const Color rim = Color(0xFFEDEDF2);
 
   // Gradient (không thể là const vì List const Color chưa được Flutter hỗ trợ trực tiếp)
   static const List<Color> primaryGradient = [

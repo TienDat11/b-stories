@@ -2,5 +2,8 @@ part of 'new_story_bloc.dart';
 
 @freezed
 class NewStoryState with _$NewStoryState {
-  const factory NewStoryState.initial() = _Initial;
+  factory NewStoryState({
+    @Default(false) bool isLoading,
+    String? errorMessage,
+  }) = _NewStoryState;
 }
