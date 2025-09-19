@@ -45,10 +45,7 @@ class _Homebody extends StatelessWidget {
         return SingleChildScrollView(
           child: Column(
             children: [
-              Padding(
-                padding: const EdgeInsets.only(top: 60, left: 16, right: 16),
-                child: BannerWidget(),
-              ),
+              BannerWidget(),
 
               SectionHeaderWidget(title: 'Truyện nổi bật', onTap: () {}),
               SizedBox(
@@ -61,7 +58,7 @@ class _Homebody extends StatelessWidget {
                   itemBuilder: (context, index) {
                     final story = stories[index];
                     return AspectRatio(
-                      aspectRatio: 4 / 5, // rộng : cao
+                      aspectRatio: 160 / 186, // rộng : cao
                       child: StoryCard(
                         imagePath: story.headerImage ?? '',
                         title: story.title ?? '',

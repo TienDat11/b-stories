@@ -1,7 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:b_stories/core/components/base/base_view.dart';
 import 'package:b_stories/core/components/card/custom_card_reading.dart';
-import 'package:b_stories/core/constants/app_colors.dart';
 import 'package:b_stories/features/read/presentation/read/bloc/read_bloc.dart';
 import 'package:b_stories/features/read/read_injector.dart';
 import 'package:flutter/material.dart';

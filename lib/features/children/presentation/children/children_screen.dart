@@ -4,8 +4,8 @@ import 'package:b_stories/core/components/appbar/custom_appbar.dart';
 import 'package:b_stories/core/components/base/base_view.dart';
 import 'package:b_stories/features/children/children_injector.dart';
 import 'package:b_stories/features/children/presentation/children/bloc/children_bloc.dart';
-import 'package:b_stories/features/read/presentation/read/read_screen.dart';
-import 'package:b_stories/features/reading/presentation/reading/reading_screen.dart';
+import 'package:b_stories/features/detail/story_detail/presentation/story_detail/story_detail_screen.dart';
+import 'package:b_stories/features/detail/story_list/presentation/story_list/story_list_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -62,7 +62,13 @@ class _ChildrenBody extends StatelessWidget {
             Expanded(
               child: TabBarView(
                 controller: tabController,
-                children: const [ReadScreen(), ReadingScreen()],
+                children: const [
+                  //ReadScreen(),
+                  StoryDetailScreen(),
+                  StoryListScreen(),
+
+                  //ReadingScreen()
+                ],
               ),
             ),
           ],

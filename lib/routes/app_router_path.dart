@@ -11,4 +11,6 @@ class AppRouterPath {
   static const String newStory = '/newStory';
   static const String reading = '/reading';
   static const String read = '/read';
+  static const String storyDetail = '/storyDetail';
+  static const String storyList = '/storyList';
 }

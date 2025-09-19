@@ -38,6 +38,7 @@ class CustomCategoryGridSection extends StatelessWidget {
             .toList();
 
         return CustomGridView(
+          titleOnTap: 'Xem tất cả',
           title: category.title ?? '',
           stories: categoryStories,
           aspectRatio: aspectRatio,

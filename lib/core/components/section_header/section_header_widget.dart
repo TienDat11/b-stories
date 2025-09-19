@@ -5,12 +5,14 @@ import 'package:flutter/material.dart';
 
 class SectionHeaderWidget extends StatelessWidget {
   final String title;
+  final String? titleOnTap;
   final VoidCallback onTap;
 
   const SectionHeaderWidget({
     required this.title,
     required this.onTap,
     super.key,
+    this.titleOnTap,
   });
 
   @override
@@ -33,7 +35,7 @@ class SectionHeaderWidget extends StatelessWidget {
           GestureDetector(
             onTap: onTap,
             child: CustomText(
-              'Xem tất cả',
+              titleOnTap ?? '',
               gradient: LinearGradient(colors: AppColors.primaryGradient),
               // style: TextStyle(
               //   fontSize: 14,

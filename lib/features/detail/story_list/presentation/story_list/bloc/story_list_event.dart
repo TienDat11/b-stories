@@ -1,0 +1,6 @@
+part of 'story_list_bloc.dart';
+
+@freezed
+class StoryListEvent with _$StoryListEvent {
+  const factory StoryListEvent.started() = _Started;
+}

@@ -6,9 +6,16 @@ class BannerImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ClipRRect(
-      borderRadius: BorderRadius.circular(20),
-      child: Image.asset(imagePath, fit: BoxFit.cover, width: double.infinity),
+    return Padding(
+      padding: const EdgeInsets.only(top: 60, left: 16, right: 16),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(20),
+        child: Image.asset(
+          imagePath,
+          fit: BoxFit.cover,
+          width: double.infinity,
+        ),
+      ),
     );
   }
 }

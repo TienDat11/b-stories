@@ -39,6 +39,8 @@ class CustomCardReading extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   CustomText(
+                    overflow: TextOverflow.ellipsis,
+                    maxLines: 1,
                     'Con Quạ thông minh',
                     gradient: LinearGradient(colors: AppColors.primaryGradient),
                   ),
@@ -47,6 +49,7 @@ class CustomCardReading extends StatelessWidget {
               ),
 
               CustomText(
+                overflow: TextOverflow.ellipsis,
                 maxLines: 2,
                 'Câu chuyện kể về chú quạ khát nước, đã khéo léo dùng những viên sỏi nhỏ để làm đầy nước trong...',
               ),

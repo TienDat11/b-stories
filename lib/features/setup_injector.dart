@@ -1,3 +1,5 @@
+import 'package:b_stories/features/detail/story_detail/story_detail_injector.dart';
+import 'package:b_stories/features/detail/story_list/story_list_injector.dart';
 import 'package:b_stories/features/home/home_injector.dart';
 import 'package:b_stories/features/main/main_injector.dart';
 import 'package:b_stories/features/new_story/new_story_injector.dart';
@@ -15,4 +17,6 @@ Future<void> setupInjector() async {
   setupReadingInjector();
   setupReadInjector();
   setupNewStoryInjector();
+  setupStoryDetailInjector();
+  setupStoryListInjector();
 }

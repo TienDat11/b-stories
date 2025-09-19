@@ -97,4 +97,17 @@ List<StoryModel> stories = [
     ..page = 11
     ..age = tuoi9_12
     ..question = 7,
+
+  StoryModel()
+    ..category = joke
+    ..title = 'Ong chiến binh'
+    ..headerImage = AppImages.beeknight
+    ..imageStory = [AppImages.beeknight, AppImages.cocKienTroi]
+    ..content =
+        'Truyện khoa học vui về loài ong. Qua nhân vật “Ong hiệp sĩ”, bé sẽ học được cách ong làm tổ, tìm mật và bảo vệ đàn.'
+    ..author = 'Nhóm nghiên cứu thiếu nhi'
+    ..manufacturer = 'NXB Giáo dục'
+    ..page = 11
+    ..age = tuoi9_12
+    ..question = 7,
 ];

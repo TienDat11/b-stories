@@ -8,9 +8,10 @@ import 'package:flutter/material.dart';
 
 class CustomGridView extends StatelessWidget {
   final String title;
+  final String? titleOnTap;
   final List<StoryModel> stories;
   final double aspectRatio;
-  final int maxItems;
+  final int? maxItems;
 
   const CustomGridView({
     super.key,
@@ -18,6 +19,7 @@ class CustomGridView extends StatelessWidget {
     required this.stories,
     this.aspectRatio = 173 / 186,
     this.maxItems = 4,
+    this.titleOnTap,
   });
 
   @override
@@ -27,6 +29,7 @@ class CustomGridView extends StatelessWidget {
       children: [
         SectionHeaderWidget(
           title: title,
+          titleOnTap: titleOnTap,
           onTap: () {
             // TODO: Navigate to CategoryScreen
           },
@@ -41,7 +44,10 @@ class CustomGridView extends StatelessWidget {
             mainAxisSpacing: 12,
             childAspectRatio: aspectRatio,
           ),
-          itemCount: min(stories.length, maxItems),
+          itemCount: maxItems == null
+              ? stories.length
+              : min(stories.length, maxItems!),
+
           itemBuilder: (context, index) {
             final story = stories[index];
             return StoryCard(
