@@ -112,5 +112,6 @@ class AppHeightSizes {
   double get h186 => 186.h;
   double get h200 => 200.h;
   double get h236 => 236.h;
+  double get h360 => 360.h;
   double get h396 => 396.h;
 }

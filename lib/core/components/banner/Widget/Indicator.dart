@@ -22,8 +22,11 @@ class Indicator extends StatelessWidget {
           width: isActive ? 16 : 6,
           height: 6,
           decoration: BoxDecoration(
-            color: isActive ? Colors.orange : AppColors.orange100,
             borderRadius: BorderRadius.circular(8),
+            gradient: isActive
+                ? LinearGradient(colors: AppColors.primaryGradient)
+                : null,
+            color: isActive ? null : AppColors.orange100,
           ),
         );
       }),

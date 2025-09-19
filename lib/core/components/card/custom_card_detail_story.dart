@@ -1,4 +1,4 @@
-import 'package:b_stories/core/components/banner/banner_widget.dart';
+import 'package:b_stories/core/components/banner/story_page_list.dart';
 import 'package:b_stories/core/components/button/custom_button.dart';
 import 'package:b_stories/core/components/text/custom_text.dart';
 import 'package:b_stories/core/constants/app_colors.dart';
@@ -17,39 +17,46 @@ class CustomCardDetailStody extends StatelessWidget {
           color: Colors.white,
           borderRadius: BorderRadius.circular(AppSizes.square.r12),
           border: Border.all(color: AppColors.rim, width: 1),
-          // boxShadow: [AppShadow.medium],
         ),
 
-        child: Padding(
-          padding: EdgeInsets.all(AppSizes.square.r16),
-          child: Column(
-            children: [
-              BannerWidget(),
-              SizedBox(height: AppSizes.height.h12),
-              CustomText(
-                maxLines: 1,
-                overflow: TextOverflow.ellipsis,
-                'Con Quạ thông minh',
-                gradient: LinearGradient(colors: AppColors.primaryGradient),
+        child: Column(
+          children: [
+            StoryPageList(),
+            Padding(
+              padding: EdgeInsets.only(
+                bottom: AppSizes.height.h16,
+                left: AppSizes.width.w16,
+                right: AppSizes.width.w16,
               ),
-
-              CustomText(
-                overflow: TextOverflow.ellipsis,
-                maxLines: 4,
-                'Câu chuyện kể về chú quạ khát nước, đã khéo léo dùng những viên sỏi nhỏ để làm đầy nước trongđã khéo léo dùng những viên sỏi nhỏ để làm đầy nước trongđã khéo léo dùng những viên sỏi nhỏ để làm đầy nước trongđã khéo léo dùng những viên sỏi nhỏ để làm đầy nước trongđã khéo léo dùng những viên sỏi nhỏ để làm đầy nước trongđã khéo léo dùng những viên sỏi nhỏ để làm đầy nước trongđã khéo léo dùng những viên sỏi nhỏ để làm đầy nước trongđã khéo léo dùng những viên sỏi nhỏ để làm đầy nước trongđã khéo léo dùng những viên sỏi nhỏ để làm đầy nước trongđã khéo léo dùng những viên sỏi nhỏ để làm đầy nước trongđã khéo léo dùng những viên sỏi nhỏ để làm đầy nước trongđã khéo léo dùng những viên sỏi nhỏ để làm đầy nước trong...',
+              child: Column(
+                children: [
+                  SizedBox(height: AppSizes.height.h20),
+                  CustomText(
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    'Con Quạ thông minh',
+                    gradient: LinearGradient(colors: AppColors.primaryGradient),
+                  ),
+                  SizedBox(height: AppSizes.height.h8),
+                  CustomText(
+                    overflow: TextOverflow.ellipsis,
+                    maxLines: 4,
+                    'Câu chuyện kể về chú quạ khát nước, đã khéo léo dùng những viên sỏi nhỏ để làm đầy nước trongđã khéo léo dùng những viên sỏi nhỏ để làm đầy nước trongđã khéo léo dùng những viên sỏi nhỏ để làm đầy nước trongđã khéo léo dùng những viên sỏi nhỏ để làm đầy nước trongđã khéo léo dùng những viên sỏi nhỏ để làm đầy nước trongđã khéo léo dùng những viên sỏi nhỏ để làm đầy nước trongđã khéo léo dùng những viên sỏi nhỏ để làm đầy nước trongđã khéo léo dùng những viên sỏi nhỏ để làm đầy nước trongđã khéo léo dùng những viên sỏi nhỏ để làm đầy nước trongđã khéo léo dùng những viên sỏi nhỏ để làm đầy nước trongđã khéo léo dùng những viên sỏi nhỏ để làm đầy nước trongđã khéo léo dùng những viên sỏi nhỏ để làm đầy nước trong...',
+                  ),
+                  SizedBox(height: AppSizes.height.h20),
+                  CustomButton(
+                    onPressed: () {},
+                    text: 'Xác nhận',
+                    gradient: LinearGradient(
+                      colors: AppColors.primaryGradient,
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                    ),
+                  ),
+                ],
               ),
-              SizedBox(height: AppSizes.height.h12),
-              CustomButton(
-                onPressed: () {},
-                text: 'Xác nhận',
-                gradient: LinearGradient(
-                  colors: AppColors.primaryGradient,
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
-                ),
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
